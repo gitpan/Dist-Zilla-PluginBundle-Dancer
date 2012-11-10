@@ -1,0 +1,48 @@
+---
+abstract: 'dzil plugins used by Dancer projects'
+author:
+  - 'Yanick Champoux <yanick@babyl.dyndns.org>'
+build_requires:
+  File::Find: 0
+  File::Temp: 0
+  Module::Build: 0.3601
+  Test::More: 0
+  warnings: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+  Module::Build: 0.3601
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Dist-Zilla-PluginBundle-Dancer
+provides:
+  Dist::Zilla::PluginBundle::Dancer:
+    file: lib/Dist/Zilla/PluginBundle/Dancer.pm
+    version: 0.0001
+requires:
+  Dist::Zilla::Plugin::AutoPrereqs: 0
+  Dist::Zilla::Plugin::ExecDir: 0
+  Dist::Zilla::Plugin::ExtraTests: 0
+  Dist::Zilla::Plugin::GatherDir: 0
+  Dist::Zilla::Plugin::License: 0
+  Dist::Zilla::Plugin::MakeMaker: 0
+  Dist::Zilla::Plugin::Manifest: 0
+  Dist::Zilla::Plugin::ManifestSkip: 0
+  Dist::Zilla::Plugin::MetaJSON: 0
+  Dist::Zilla::Plugin::MetaProvides::Package: 0
+  Dist::Zilla::Plugin::MetaTests: 0
+  Dist::Zilla::Plugin::MetaYAML: 0
+  Dist::Zilla::Plugin::ModuleBuild: 0
+  Dist::Zilla::Plugin::NoTabsTests: 0
+  Dist::Zilla::Plugin::PkgVersion: 0
+  Dist::Zilla::Plugin::PodSyntaxTests: 0
+  Dist::Zilla::Plugin::PodWeaver: 0
+  Dist::Zilla::Plugin::PruneCruft: 0
+  Dist::Zilla::Plugin::Test::Compile: 0
+  Dist::Zilla::Role::PluginBundle::Easy: 0
+  Moose: 0
+  strict: 0
+version: 0.0001

@@ -1,0 +1,60 @@
+
+use strict;
+use warnings;
+
+use Module::Build 0.3601;
+
+
+my %module_build_args = (
+  "build_requires" => {
+    "File::Find" => 0,
+    "File::Temp" => 0,
+    "Module::Build" => "0.3601",
+    "Test::More" => 0,
+    "warnings" => 0
+  },
+  "configure_requires" => {
+    "ExtUtils::MakeMaker" => "6.30",
+    "Module::Build" => "0.3601"
+  },
+  "dist_abstract" => "dzil plugins used by Dancer projects",
+  "dist_author" => [
+    "Yanick Champoux <yanick\@babyl.dyndns.org>"
+  ],
+  "dist_name" => "Dist-Zilla-PluginBundle-Dancer",
+  "dist_version" => "0.0001",
+  "license" => "perl",
+  "module_name" => "Dist::Zilla::PluginBundle::Dancer",
+  "recommends" => {},
+  "recursive_test_files" => 1,
+  "requires" => {
+    "Dist::Zilla::Plugin::AutoPrereqs" => 0,
+    "Dist::Zilla::Plugin::ExecDir" => 0,
+    "Dist::Zilla::Plugin::ExtraTests" => 0,
+    "Dist::Zilla::Plugin::GatherDir" => 0,
+    "Dist::Zilla::Plugin::License" => 0,
+    "Dist::Zilla::Plugin::MakeMaker" => 0,
+    "Dist::Zilla::Plugin::Manifest" => 0,
+    "Dist::Zilla::Plugin::ManifestSkip" => 0,
+    "Dist::Zilla::Plugin::MetaJSON" => 0,
+    "Dist::Zilla::Plugin::MetaProvides::Package" => 0,
+    "Dist::Zilla::Plugin::MetaTests" => 0,
+    "Dist::Zilla::Plugin::MetaYAML" => 0,
+    "Dist::Zilla::Plugin::ModuleBuild" => 0,
+    "Dist::Zilla::Plugin::NoTabsTests" => 0,
+    "Dist::Zilla::Plugin::PkgVersion" => 0,
+    "Dist::Zilla::Plugin::PodSyntaxTests" => 0,
+    "Dist::Zilla::Plugin::PodWeaver" => 0,
+    "Dist::Zilla::Plugin::PruneCruft" => 0,
+    "Dist::Zilla::Plugin::Test::Compile" => 0,
+    "Dist::Zilla::Role::PluginBundle::Easy" => 0,
+    "Moose" => 0,
+    "strict" => 0
+  },
+  "script_files" => []
+);
+
+
+my $build = Module::Build->new(%module_build_args);
+
+$build->create_build_script;
