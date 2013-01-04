@@ -21,7 +21,7 @@ name: Dist-Zilla-PluginBundle-Dancer
 provides:
   Dist::Zilla::PluginBundle::Dancer:
     file: lib/Dist/Zilla/PluginBundle/Dancer.pm
-    version: 0.0001
+    version: 0.0002
 requires:
   Dist::Zilla::Plugin::AutoPrereqs: 0
   Dist::Zilla::Plugin::ExecDir: 0
@@ -45,4 +45,4 @@ requires:
   Dist::Zilla::Role::PluginBundle::Easy: 0
   Moose: 0
   strict: 0
-version: 0.0001
+version: 0.0002

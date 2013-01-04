@@ -22,7 +22,7 @@ my %module_build_args = (
     "Yanick Champoux <yanick\@babyl.dyndns.org>"
   ],
   "dist_name" => "Dist-Zilla-PluginBundle-Dancer",
-  "dist_version" => "0.0001",
+  "dist_version" => "0.0002",
   "license" => "perl",
   "module_name" => "Dist::Zilla::PluginBundle::Dancer",
   "recommends" => {},

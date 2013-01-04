@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Dancer;
 {
-  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0001';
+  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0002';
 }
 
 # ABSTRACT: dzil plugins used by Dancer projects
@@ -37,7 +37,10 @@ sub configure {
     my $arg = $self->payload;
 
     $self->add_plugins(
-        'GatherDir',
+        [ 'GatherDir' => { 
+                include_dotfiles => $arg->{include_dotfiles} // 1
+            },
+        ],
         [ 'Test::Compile' => { skip => $arg->{test_compile_skip} } ],
         qw/ 
             MetaTests
@@ -79,7 +82,7 @@ Dist::Zilla::PluginBundle::Dancer - dzil plugins used by Dancer projects
 
 =head1 VERSION
 
-version 0.0001
+version 0.0002
 
 =head1 DESCRIPTION
 
@@ -118,6 +121,10 @@ I<skip> option for L<Dist::Zilla::Plugin::Test::Compile>.
 =head3 autoprereqs_skip
 
 I<skip> option for L<Dist::Zilla::Plugin::AutoPrereqs>.
+
+=head3 include_dotfiles
+
+For L<Dist::Zilla::Plugin::GatherDir>. Defaults to I<1>.
 
 =head1 AUTHOR
 
