@@ -1,10 +1,12 @@
 package Dist::Zilla::PluginBundle::Dancer;
 {
-  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0002';
+  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0003';
 }
 
 # ABSTRACT: dzil plugins used by Dancer projects
 
+
+use 5.10.0;
 
 use strict;
 
@@ -82,7 +84,7 @@ Dist::Zilla::PluginBundle::Dancer - dzil plugins used by Dancer projects
 
 =head1 VERSION
 
-version 0.0002
+version 0.0003
 
 =head1 DESCRIPTION
 

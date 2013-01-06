@@ -54,6 +54,7 @@
             "Dist::Zilla::Plugin::Test::Compile" : "0",
             "Dist::Zilla::Role::PluginBundle::Easy" : "0",
             "Moose" : "0",
+            "perl" : "v5.10.0",
             "strict" : "0"
          }
       },
@@ -69,10 +70,10 @@
    "provides" : {
       "Dist::Zilla::PluginBundle::Dancer" : {
          "file" : "lib/Dist/Zilla/PluginBundle/Dancer.pm",
-         "version" : "0.0002"
+         "version" : "0.0003"
       }
    },
    "release_status" : "stable",
-   "version" : "0.0002"
+   "version" : "0.0003"
 }
 

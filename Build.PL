@@ -22,7 +22,7 @@ my %module_build_args = (
     "Yanick Champoux <yanick\@babyl.dyndns.org>"
   ],
   "dist_name" => "Dist-Zilla-PluginBundle-Dancer",
-  "dist_version" => "0.0002",
+  "dist_version" => "0.0003",
   "license" => "perl",
   "module_name" => "Dist::Zilla::PluginBundle::Dancer",
   "recommends" => {},
@@ -49,6 +49,7 @@ my %module_build_args = (
     "Dist::Zilla::Plugin::Test::Compile" => 0,
     "Dist::Zilla::Role::PluginBundle::Easy" => 0,
     "Moose" => 0,
+    "perl" => "v5.10.0",
     "strict" => 0
   },
   "script_files" => []
