@@ -7,8 +7,11 @@ use Module::Build 0.3601;
 
 my %module_build_args = (
   "build_requires" => {
+    "ExtUtils::MakeMaker" => 0,
     "File::Find" => 0,
+    "File::Spec::Functions" => 0,
     "File::Temp" => 0,
+    "List::Util" => 0,
     "Module::Build" => "0.3601",
     "Test::More" => 0,
     "warnings" => 0
@@ -22,7 +25,7 @@ my %module_build_args = (
     "Yanick Champoux <yanick\@babyl.dyndns.org>"
   ],
   "dist_name" => "Dist-Zilla-PluginBundle-Dancer",
-  "dist_version" => "0.0003",
+  "dist_version" => "0.0004",
   "license" => "perl",
   "module_name" => "Dist::Zilla::PluginBundle::Dancer",
   "recommends" => {},
@@ -47,6 +50,7 @@ my %module_build_args = (
     "Dist::Zilla::Plugin::PodWeaver" => 0,
     "Dist::Zilla::Plugin::PruneCruft" => 0,
     "Dist::Zilla::Plugin::Test::Compile" => 0,
+    "Dist::Zilla::Plugin::Test::ReportPrereqs" => 0,
     "Dist::Zilla::Role::PluginBundle::Easy" => 0,
     "Moose" => 0,
     "perl" => "v5.10.0",

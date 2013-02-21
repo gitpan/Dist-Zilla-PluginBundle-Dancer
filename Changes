@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-Dancer
 
+0.0004
+   - Add DZ::P::Test::ReportPrereqs
+
 0.0003
    - Require 5.10.0.
 

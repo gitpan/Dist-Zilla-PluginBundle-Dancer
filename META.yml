@@ -3,8 +3,11 @@ abstract: 'dzil plugins used by Dancer projects'
 author:
   - 'Yanick Champoux <yanick@babyl.dyndns.org>'
 build_requires:
+  ExtUtils::MakeMaker: 0
   File::Find: 0
+  File::Spec::Functions: 0
   File::Temp: 0
+  List::Util: 0
   Module::Build: 0.3601
   Test::More: 0
   warnings: 0
@@ -21,7 +24,7 @@ name: Dist-Zilla-PluginBundle-Dancer
 provides:
   Dist::Zilla::PluginBundle::Dancer:
     file: lib/Dist/Zilla/PluginBundle/Dancer.pm
-    version: 0.0003
+    version: 0.0004
 requires:
   Dist::Zilla::Plugin::AutoPrereqs: 0
   Dist::Zilla::Plugin::ExecDir: 0
@@ -42,8 +45,9 @@ requires:
   Dist::Zilla::Plugin::PodWeaver: 0
   Dist::Zilla::Plugin::PruneCruft: 0
   Dist::Zilla::Plugin::Test::Compile: 0
+  Dist::Zilla::Plugin::Test::ReportPrereqs: 0
   Dist::Zilla::Role::PluginBundle::Easy: 0
   Moose: 0
   perl: v5.10.0
   strict: 0
-version: 0.0003
+version: 0.0004

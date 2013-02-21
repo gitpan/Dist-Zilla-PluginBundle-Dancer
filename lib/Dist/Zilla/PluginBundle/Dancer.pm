@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::Dancer;
 {
-  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0003';
+  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0004';
 }
 
 # ABSTRACT: dzil plugins used by Dancer projects
@@ -31,6 +31,7 @@ use Dist::Zilla::Plugin::ModuleBuild;
 use Dist::Zilla::Plugin::MetaYAML;
 use Dist::Zilla::Plugin::MetaJSON;
 use Dist::Zilla::Plugin::Manifest;
+use Dist::Zilla::Plugin::Test::ReportPrereqs;
 
 with 'Dist::Zilla::Role::PluginBundle::Easy';
 
@@ -49,6 +50,7 @@ sub configure {
             NoTabsTests
             PodSyntaxTests
             ExtraTests
+            Test::ReportPrereqs
             PodWeaver
             PruneCruft
             ManifestSkip
@@ -84,7 +86,7 @@ Dist::Zilla::PluginBundle::Dancer - dzil plugins used by Dancer projects
 
 =head1 VERSION
 
-version 0.0003
+version 0.0004
 
 =head1 DESCRIPTION
 
@@ -111,6 +113,7 @@ their distributions. It's roughly equivalent to
     [MetaTests]
     [NoTabTests]
     [PodSyntaxTests]
+    [Test::ReportPrereqs]
 
     [PodWeaver]
 

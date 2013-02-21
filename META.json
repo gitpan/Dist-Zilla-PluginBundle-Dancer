@@ -52,6 +52,7 @@
             "Dist::Zilla::Plugin::PodWeaver" : "0",
             "Dist::Zilla::Plugin::PruneCruft" : "0",
             "Dist::Zilla::Plugin::Test::Compile" : "0",
+            "Dist::Zilla::Plugin::Test::ReportPrereqs" : "0",
             "Dist::Zilla::Role::PluginBundle::Easy" : "0",
             "Moose" : "0",
             "perl" : "v5.10.0",
@@ -60,8 +61,11 @@
       },
       "test" : {
          "requires" : {
+            "ExtUtils::MakeMaker" : "0",
             "File::Find" : "0",
+            "File::Spec::Functions" : "0",
             "File::Temp" : "0",
+            "List::Util" : "0",
             "Test::More" : "0",
             "warnings" : "0"
          }
@@ -70,10 +74,10 @@
    "provides" : {
       "Dist::Zilla::PluginBundle::Dancer" : {
          "file" : "lib/Dist/Zilla/PluginBundle/Dancer.pm",
-         "version" : "0.0003"
+         "version" : "0.0004"
       }
    },
    "release_status" : "stable",
-   "version" : "0.0003"
+   "version" : "0.0004"
 }
 

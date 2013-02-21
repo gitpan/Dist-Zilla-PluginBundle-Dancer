@@ -12,8 +12,11 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "dzil plugins used by Dancer projects",
   "AUTHOR" => "Yanick Champoux <yanick\@babyl.dyndns.org>",
   "BUILD_REQUIRES" => {
+    "ExtUtils::MakeMaker" => 0,
     "File::Find" => 0,
+    "File::Spec::Functions" => 0,
     "File::Temp" => 0,
+    "List::Util" => 0,
     "Module::Build" => "0.3601",
     "Test::More" => 0,
     "warnings" => 0
@@ -46,11 +49,12 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Plugin::PodWeaver" => 0,
     "Dist::Zilla::Plugin::PruneCruft" => 0,
     "Dist::Zilla::Plugin::Test::Compile" => 0,
+    "Dist::Zilla::Plugin::Test::ReportPrereqs" => 0,
     "Dist::Zilla::Role::PluginBundle::Easy" => 0,
     "Moose" => 0,
     "strict" => 0
   },
-  "VERSION" => "0.0003",
+  "VERSION" => "0.0004",
   "test" => {
     "TESTS" => "t/*.t"
   }
