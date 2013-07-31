@@ -1,6 +1,9 @@
 package Dist::Zilla::PluginBundle::Dancer;
+BEGIN {
+  $Dist::Zilla::PluginBundle::Dancer::AUTHORITY = 'cpan:YANICK';
+}
 {
-  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0004';
+  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0005';
 }
 
 # ABSTRACT: dzil plugins used by Dancer projects
@@ -13,7 +16,7 @@ use strict;
 use Moose;
 
 use Dist::Zilla::Plugin::GatherDir;
-use Dist::Zilla::Plugin::Test::Compile;
+use Dist::Zilla::Plugin::Test::Compile 2.011;
 use Dist::Zilla::Plugin::MetaTests;
 use Dist::Zilla::Plugin::NoTabsTests;
 use Dist::Zilla::Plugin::PodSyntaxTests;
@@ -32,8 +35,40 @@ use Dist::Zilla::Plugin::MetaYAML;
 use Dist::Zilla::Plugin::MetaJSON;
 use Dist::Zilla::Plugin::Manifest;
 use Dist::Zilla::Plugin::Test::ReportPrereqs;
+use Dist::Zilla::Plugin::ContributorsFromGit;
+use Dist::Zilla::Plugin::ContributorsFile;
+use Dist::Zilla::Plugin::UploadToCPAN;
+use Dist::Zilla::Plugin::Authority;
 
 with 'Dist::Zilla::Role::PluginBundle::Easy';
+
+has authority => (
+    is      => 'ro',
+    isa     => 'Maybe[Str]',
+    lazy    => 1,
+    default => sub { $_[0]->payload->{authority} },
+);
+
+has test_compile_skip => (
+    is => 'ro',
+    isa => 'ArrayRef[Str]',
+    lazy => 1,
+    default => sub {
+        return [ 
+            ( $_[0]->payload->{test_compile_skip} )
+                x !! $_[0]->payload->{test_compile_skip}
+        ];
+    },
+);
+
+has include_dotfiles => (
+    is => 'ro',
+    isa => 'Bool',
+    lazy => 1,
+    default => sub {
+        $_[0]->payload->{include_dotfiles} // 1;
+    },
+);
 
 sub configure {
     my ( $self ) = @_;
@@ -41,10 +76,10 @@ sub configure {
 
     $self->add_plugins(
         [ 'GatherDir' => { 
-                include_dotfiles => $arg->{include_dotfiles} // 1
+                include_dotfiles => $self->include_dotfiles
             },
         ],
-        [ 'Test::Compile' => { skip => $arg->{test_compile_skip} } ],
+        [ 'Test::Compile' => { skip => $self->test_compile_skip } ],
         qw/ 
             MetaTests
             NoTabsTests
@@ -61,13 +96,25 @@ sub configure {
         } ],
         'MetaProvides::Package',
         'PkgVersion',
+    );
+
+    if ( my $authority = $self->authority ) {
+        $self->add_plugins(
+            [ 'Authority' => { authority => $authority } ],
+        );
+    }
+
+    $self->add_plugins(
         qw/
+            ContributorsFromGit
+            ContributorsFile
             License
             MakeMaker
             ModuleBuild
             MetaYAML
             MetaJSON
             Manifest
+            UploadToCPAN
         /,
     );
 
@@ -86,7 +133,7 @@ Dist::Zilla::PluginBundle::Dancer - dzil plugins used by Dancer projects
 
 =head1 VERSION
 
-version 0.0004
+version 0.0005
 
 =head1 DESCRIPTION
 
@@ -109,6 +156,12 @@ their distributions. It's roughly equivalent to
 
     [PkgVersion]
 
+    [Authority]
+
+    [ContributorsFromGit]
+
+    [ContributorsFile]
+
     [Test::Compile]
     [MetaTests]
     [NoTabTests]
@@ -117,7 +170,14 @@ their distributions. It's roughly equivalent to
 
     [PodWeaver]
 
+    [UploadToCPAN]
+
 =head2 ARGUMENTS
+
+=head3 authority
+
+For L<Dist::Zilla::Plugin::Authority>. If not given,
+L<Dist::Zilla::Plugin::Authority> will not be used.
 
 =head3 test_compile_skip
 
@@ -133,7 +193,7 @@ For L<Dist::Zilla::Plugin::GatherDir>. Defaults to I<1>.
 
 =head1 AUTHOR
 
-Yanick Champoux <yanick@babyl.dyndns.org>
+Yanick Champoux <yanick@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

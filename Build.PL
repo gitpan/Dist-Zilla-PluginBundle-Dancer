@@ -7,13 +7,13 @@ use Module::Build 0.3601;
 
 my %module_build_args = (
   "build_requires" => {
+    "Capture::Tiny" => 0,
     "ExtUtils::MakeMaker" => 0,
-    "File::Find" => 0,
     "File::Spec::Functions" => 0,
-    "File::Temp" => 0,
     "List::Util" => 0,
     "Module::Build" => "0.3601",
-    "Test::More" => 0,
+    "Test::More" => "0.88",
+    "blib" => 0,
     "warnings" => 0
   },
   "configure_requires" => {
@@ -22,16 +22,19 @@ my %module_build_args = (
   },
   "dist_abstract" => "dzil plugins used by Dancer projects",
   "dist_author" => [
-    "Yanick Champoux <yanick\@babyl.dyndns.org>"
+    "Yanick Champoux <yanick\@cpan.org>"
   ],
   "dist_name" => "Dist-Zilla-PluginBundle-Dancer",
-  "dist_version" => "0.0004",
+  "dist_version" => "0.0005",
   "license" => "perl",
   "module_name" => "Dist::Zilla::PluginBundle::Dancer",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
+    "Dist::Zilla::Plugin::Authority" => 0,
     "Dist::Zilla::Plugin::AutoPrereqs" => 0,
+    "Dist::Zilla::Plugin::ContributorsFile" => 0,
+    "Dist::Zilla::Plugin::ContributorsFromGit" => 0,
     "Dist::Zilla::Plugin::ExecDir" => 0,
     "Dist::Zilla::Plugin::ExtraTests" => 0,
     "Dist::Zilla::Plugin::GatherDir" => 0,
@@ -49,8 +52,9 @@ my %module_build_args = (
     "Dist::Zilla::Plugin::PodSyntaxTests" => 0,
     "Dist::Zilla::Plugin::PodWeaver" => 0,
     "Dist::Zilla::Plugin::PruneCruft" => 0,
-    "Dist::Zilla::Plugin::Test::Compile" => 0,
+    "Dist::Zilla::Plugin::Test::Compile" => "2.011",
     "Dist::Zilla::Plugin::Test::ReportPrereqs" => 0,
+    "Dist::Zilla::Plugin::UploadToCPAN" => 0,
     "Dist::Zilla::Role::PluginBundle::Easy" => 0,
     "Moose" => 0,
     "perl" => "v5.10.0",

@@ -10,7 +10,11 @@ use File::Spec::Functions;
 use List::Util qw/max/;
 
 my @modules = qw(
+  Capture::Tiny
+  Dist::Zilla::Plugin::Authority
   Dist::Zilla::Plugin::AutoPrereqs
+  Dist::Zilla::Plugin::ContributorsFile
+  Dist::Zilla::Plugin::ContributorsFromGit
   Dist::Zilla::Plugin::ExecDir
   Dist::Zilla::Plugin::ExtraTests
   Dist::Zilla::Plugin::GatherDir
@@ -30,15 +34,15 @@ my @modules = qw(
   Dist::Zilla::Plugin::PruneCruft
   Dist::Zilla::Plugin::Test::Compile
   Dist::Zilla::Plugin::Test::ReportPrereqs
+  Dist::Zilla::Plugin::UploadToCPAN
   Dist::Zilla::Role::PluginBundle::Easy
   ExtUtils::MakeMaker
-  File::Find
   File::Spec::Functions
-  File::Temp
   List::Util
   Module::Build
   Moose
   Test::More
+  blib
   perl
   strict
   warnings
