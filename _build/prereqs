@@ -1,0 +1,45 @@
+do{ my $x = {
+       'build_requires' => {
+                             'warnings' => 0,
+                             'Capture::Tiny' => 0,
+                             'ExtUtils::MakeMaker' => 0,
+                             'List::Util' => 0,
+                             'Test::More' => '0.88',
+                             'File::Spec::Functions' => 0,
+                             'Module::Build' => '0.3601',
+                             'blib' => 0
+                           },
+       'conflicts' => {},
+       'requires' => {
+                       'Dist::Zilla::Plugin::PodWeaver' => 0,
+                       'Dist::Zilla::Plugin::MetaYAML' => 0,
+                       'Dist::Zilla::Plugin::MetaProvides::Package' => 0,
+                       'Dist::Zilla::Plugin::ModuleBuild' => 0,
+                       'Dist::Zilla::Plugin::AutoPrereqs' => 0,
+                       'Dist::Zilla::Role::PluginBundle::Easy' => 0,
+                       'Dist::Zilla::Plugin::GatherDir' => 0,
+                       'Dist::Zilla::Plugin::License' => 0,
+                       'Moose' => 0,
+                       'Dist::Zilla::Plugin::Test::ReportPrereqs' => 0,
+                       'Dist::Zilla::Plugin::ManifestSkip' => 0,
+                       'Dist::Zilla::Plugin::ExtraTests' => 0,
+                       'Dist::Zilla::Plugin::ContributorsFile' => 0,
+                       'Dist::Zilla::Plugin::Authority' => 0,
+                       'Dist::Zilla::Plugin::ExecDir' => 0,
+                       'strict' => 0,
+                       'perl' => 'v5.10.0',
+                       'Dist::Zilla::Plugin::UploadToCPAN' => 0,
+                       'Dist::Zilla::Plugin::PodSyntaxTests' => 0,
+                       'Dist::Zilla::Plugin::PkgVersion' => 0,
+                       'Dist::Zilla::Plugin::ContributorsFromGit' => 0,
+                       'Dist::Zilla::Plugin::NoTabsTests' => 0,
+                       'Dist::Zilla::Plugin::MakeMaker' => 0,
+                       'Dist::Zilla::Plugin::MetaJSON' => 0,
+                       'Dist::Zilla::Plugin::PruneCruft' => 0,
+                       'Dist::Zilla::Plugin::Test::Compile' => '2.011',
+                       'Dist::Zilla::Plugin::Manifest' => 0,
+                       'Dist::Zilla::Plugin::MetaTests' => 0
+                     },
+       'recommends' => {}
+     };
+$x; }

@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::Dancer::AUTHORITY = 'cpan:YANICK';
 }
 {
-  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0005';
+  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0006';
 }
 
 # ABSTRACT: dzil plugins used by Dancer projects
@@ -35,8 +35,6 @@ use Dist::Zilla::Plugin::MetaYAML;
 use Dist::Zilla::Plugin::MetaJSON;
 use Dist::Zilla::Plugin::Manifest;
 use Dist::Zilla::Plugin::Test::ReportPrereqs;
-use Dist::Zilla::Plugin::ContributorsFromGit;
-use Dist::Zilla::Plugin::ContributorsFile;
 use Dist::Zilla::Plugin::UploadToCPAN;
 use Dist::Zilla::Plugin::Authority;
 
@@ -106,8 +104,6 @@ sub configure {
 
     $self->add_plugins(
         qw/
-            ContributorsFromGit
-            ContributorsFile
             License
             MakeMaker
             ModuleBuild
@@ -133,7 +129,7 @@ Dist::Zilla::PluginBundle::Dancer - dzil plugins used by Dancer projects
 
 =head1 VERSION
 
-version 0.0005
+version 0.0006
 
 =head1 DESCRIPTION
 
@@ -157,10 +153,6 @@ their distributions. It's roughly equivalent to
     [PkgVersion]
 
     [Authority]
-
-    [ContributorsFromGit]
-
-    [ContributorsFile]
 
     [Test::Compile]
     [MetaTests]

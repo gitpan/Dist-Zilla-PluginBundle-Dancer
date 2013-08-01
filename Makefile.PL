@@ -32,8 +32,6 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Dist::Zilla::Plugin::Authority" => 0,
     "Dist::Zilla::Plugin::AutoPrereqs" => 0,
-    "Dist::Zilla::Plugin::ContributorsFile" => 0,
-    "Dist::Zilla::Plugin::ContributorsFromGit" => 0,
     "Dist::Zilla::Plugin::ExecDir" => 0,
     "Dist::Zilla::Plugin::ExtraTests" => 0,
     "Dist::Zilla::Plugin::GatherDir" => 0,
@@ -58,7 +56,7 @@ my %WriteMakefileArgs = (
     "Moose" => 0,
     "strict" => 0
   },
-  "VERSION" => "0.0005",
+  "VERSION" => "0.0006",
   "test" => {
     "TESTS" => "t/*.t"
   }

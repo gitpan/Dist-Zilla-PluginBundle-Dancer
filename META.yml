@@ -24,12 +24,10 @@ name: Dist-Zilla-PluginBundle-Dancer
 provides:
   Dist::Zilla::PluginBundle::Dancer:
     file: lib/Dist/Zilla/PluginBundle/Dancer.pm
-    version: 0.0005
+    version: 0.0006
 requires:
   Dist::Zilla::Plugin::Authority: 0
   Dist::Zilla::Plugin::AutoPrereqs: 0
-  Dist::Zilla::Plugin::ContributorsFile: 0
-  Dist::Zilla::Plugin::ContributorsFromGit: 0
   Dist::Zilla::Plugin::ExecDir: 0
   Dist::Zilla::Plugin::ExtraTests: 0
   Dist::Zilla::Plugin::GatherDir: 0
@@ -54,8 +52,5 @@ requires:
   Moose: 0
   perl: v5.10.0
   strict: 0
-version: 0.0005
+version: 0.0006
 x_authority: cpan:YANICK
-x_contributors:
-  - 'Alberto Simões <ambs@cpan.org>'
-  - 'Franck Cuny <franck@lumberjaph.net>'

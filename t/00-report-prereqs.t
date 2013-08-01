@@ -13,8 +13,6 @@ my @modules = qw(
   Capture::Tiny
   Dist::Zilla::Plugin::Authority
   Dist::Zilla::Plugin::AutoPrereqs
-  Dist::Zilla::Plugin::ContributorsFile
-  Dist::Zilla::Plugin::ContributorsFromGit
   Dist::Zilla::Plugin::ExecDir
   Dist::Zilla::Plugin::ExtraTests
   Dist::Zilla::Plugin::GatherDir
