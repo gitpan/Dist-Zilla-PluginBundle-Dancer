@@ -52,7 +52,7 @@
             "Dist::Zilla::Plugin::PodSyntaxTests" : "0",
             "Dist::Zilla::Plugin::PodWeaver" : "0",
             "Dist::Zilla::Plugin::PruneCruft" : "0",
-            "Dist::Zilla::Plugin::Test::Compile" : "2.011",
+            "Dist::Zilla::Plugin::Test::Compile" : "2.020",
             "Dist::Zilla::Plugin::Test::ReportPrereqs" : "0",
             "Dist::Zilla::Plugin::UploadToCPAN" : "0",
             "Dist::Zilla::Role::PluginBundle::Easy" : "0",
@@ -63,12 +63,13 @@
       },
       "test" : {
          "requires" : {
-            "Capture::Tiny" : "0",
             "ExtUtils::MakeMaker" : "0",
+            "File::Spec" : "0",
             "File::Spec::Functions" : "0",
+            "IO::Handle" : "0",
+            "IPC::Open3" : "0",
             "List::Util" : "0",
             "Test::More" : "0.88",
-            "blib" : "0",
             "warnings" : "0"
          }
       }
@@ -76,11 +77,11 @@
    "provides" : {
       "Dist::Zilla::PluginBundle::Dancer" : {
          "file" : "lib/Dist/Zilla/PluginBundle/Dancer.pm",
-         "version" : "0.0006"
+         "version" : "0.0007"
       }
    },
    "release_status" : "stable",
-   "version" : "0.0006",
+   "version" : "0.0007",
    "x_authority" : "cpan:YANICK"
 }
 

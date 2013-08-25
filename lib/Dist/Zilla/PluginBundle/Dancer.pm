@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::Dancer::AUTHORITY = 'cpan:YANICK';
 }
 {
-  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0006';
+  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0007';
 }
 
 # ABSTRACT: dzil plugins used by Dancer projects
@@ -16,7 +16,7 @@ use strict;
 use Moose;
 
 use Dist::Zilla::Plugin::GatherDir;
-use Dist::Zilla::Plugin::Test::Compile 2.011;
+use Dist::Zilla::Plugin::Test::Compile 2.020;
 use Dist::Zilla::Plugin::MetaTests;
 use Dist::Zilla::Plugin::NoTabsTests;
 use Dist::Zilla::Plugin::PodSyntaxTests;
@@ -129,7 +129,7 @@ Dist::Zilla::PluginBundle::Dancer - dzil plugins used by Dancer projects
 
 =head1 VERSION
 
-version 0.0006
+version 0.0007
 
 =head1 DESCRIPTION
 
