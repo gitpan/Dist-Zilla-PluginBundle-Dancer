@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::Dancer::AUTHORITY = 'cpan:YANICK';
 }
 {
-  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0007';
+  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0008';
 }
 
 # ABSTRACT: dzil plugins used by Dancer projects
@@ -129,7 +129,7 @@ Dist::Zilla::PluginBundle::Dancer - dzil plugins used by Dancer projects
 
 =head1 VERSION
 
-version 0.0007
+version 0.0008
 
 =head1 DESCRIPTION
 

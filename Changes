@@ -1,5 +1,10 @@
 Revision history for Dist-Zilla-PluginBundle-Dancer
 
+0.0008 2013-09-25
+ [BUG FIXES]
+ - Dist::Zilla::Plugin::Test::Compile was causing test to potentially hang
+   on Windows. (reported by Karen Etheridge)
+
 0.0007 2013-08-25
     - Bump dependency to Dist::Zilla::Plugin::TestCompile to 2.020.
 
