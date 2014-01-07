@@ -1,5 +1,10 @@
 Revision history for Dist-Zilla-PluginBundle-Dancer
 
+0.0009 2014-01-06
+ [IMPROVEMENTS]
+ - Bump the version for Dist::Zilla::Plugin::Test::Compile (to protect
+    ourselves from some buggy releases).
+
 0.0008 2013-09-25
  [BUG FIXES]
  - Dist::Zilla::Plugin::Test::Compile was causing test to potentially hang

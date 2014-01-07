@@ -16,7 +16,7 @@ configure_requires:
   ExtUtils::MakeMaker: 6.30
   Module::Build: 0.3601
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300037, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -25,7 +25,7 @@ name: Dist-Zilla-PluginBundle-Dancer
 provides:
   Dist::Zilla::PluginBundle::Dancer:
     file: lib/Dist/Zilla/PluginBundle/Dancer.pm
-    version: 0.0008
+    version: 0.0009
 requires:
   Dist::Zilla::Plugin::Authority: 0
   Dist::Zilla::Plugin::AutoPrereqs: 0
@@ -46,12 +46,12 @@ requires:
   Dist::Zilla::Plugin::PodSyntaxTests: 0
   Dist::Zilla::Plugin::PodWeaver: 0
   Dist::Zilla::Plugin::PruneCruft: 0
-  Dist::Zilla::Plugin::Test::Compile: 2.020
+  Dist::Zilla::Plugin::Test::Compile: 2.039
   Dist::Zilla::Plugin::Test::ReportPrereqs: 0
   Dist::Zilla::Plugin::UploadToCPAN: 0
   Dist::Zilla::Role::PluginBundle::Easy: 0
   Moose: 0
   perl: v5.10.0
   strict: 0
-version: 0.0008
+version: 0.0009
 x_authority: cpan:YANICK
