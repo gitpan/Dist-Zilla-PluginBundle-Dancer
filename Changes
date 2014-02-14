@@ -1,5 +1,14 @@
 Revision history for Dist-Zilla-PluginBundle-Dancer
 
+0.0010 2014-02-13
+ [IMPROVEMENTS]
+ - Don't 'use' the plugins in the bundle directly. 
+    (GH#8, pointed out by Kent Fredric)
+
+ [BUG FIXES]
+ - New Config::MVP is breaking on impossible configuration. 
+    (GH#7, reported by Kent Fredric)
+
 0.0009 2014-01-06
  [IMPROVEMENTS]
  - Bump the version for Dist::Zilla::Plugin::Test::Compile (to protect

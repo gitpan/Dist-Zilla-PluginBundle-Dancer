@@ -41,6 +41,7 @@ my @modules = qw(
   List::Util
   Module::Build
   Moose
+  PerlX::Maybe
   Test::More
   perl
   strict

@@ -2,10 +2,7 @@ package Dist::Zilla::PluginBundle::Dancer;
 BEGIN {
   $Dist::Zilla::PluginBundle::Dancer::AUTHORITY = 'cpan:YANICK';
 }
-{
-  $Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0009';
-}
-
+$Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0010';
 # ABSTRACT: dzil plugins used by Dancer projects
 
 
@@ -13,30 +10,9 @@ use 5.10.0;
 
 use strict;
 
-use Moose;
+use PerlX::Maybe;
 
-use Dist::Zilla::Plugin::GatherDir;
-use Dist::Zilla::Plugin::Test::Compile 2.039;
-use Dist::Zilla::Plugin::MetaTests;
-use Dist::Zilla::Plugin::NoTabsTests;
-use Dist::Zilla::Plugin::PodSyntaxTests;
-use Dist::Zilla::Plugin::ExtraTests;
-use Dist::Zilla::Plugin::PodWeaver;
-use Dist::Zilla::Plugin::PruneCruft;
-use Dist::Zilla::Plugin::ManifestSkip;
-use Dist::Zilla::Plugin::ExecDir;
-use Dist::Zilla::Plugin::AutoPrereqs;
-use Dist::Zilla::Plugin::PkgVersion;
-use Dist::Zilla::Plugin::MetaProvides::Package;
-use Dist::Zilla::Plugin::License;
-use Dist::Zilla::Plugin::MakeMaker;
-use Dist::Zilla::Plugin::ModuleBuild;
-use Dist::Zilla::Plugin::MetaYAML;
-use Dist::Zilla::Plugin::MetaJSON;
-use Dist::Zilla::Plugin::Manifest;
-use Dist::Zilla::Plugin::Test::ReportPrereqs;
-use Dist::Zilla::Plugin::UploadToCPAN;
-use Dist::Zilla::Plugin::Authority;
+use Moose;
 
 with 'Dist::Zilla::Role::PluginBundle::Easy';
 
@@ -47,17 +23,9 @@ has authority => (
     default => sub { $_[0]->payload->{authority} },
 );
 
-has test_compile_skip => (
-    is => 'ro',
-    isa => 'ArrayRef[Str]',
-    lazy => 1,
-    default => sub {
-        return [ 
-            ( $_[0]->payload->{test_compile_skip} )
-                x !! $_[0]->payload->{test_compile_skip}
-        ];
-    },
-);
+sub test_compile_skip {
+        return maybe skip => $_[0]->payload->{test_compile_skip}; 
+};
 
 has include_dotfiles => (
     is => 'ro',
@@ -77,7 +45,10 @@ sub configure {
                 include_dotfiles => $self->include_dotfiles
             },
         ],
-        [ 'Test::Compile' => { skip => $self->test_compile_skip } ],
+        [ 'Test::Compile' => { 
+                skip => $self->test_compile_skip,
+                ':version' => '2.039',
+            } ],
         qw/ 
             MetaTests
             NoTabsTests
@@ -129,7 +100,7 @@ Dist::Zilla::PluginBundle::Dancer - dzil plugins used by Dancer projects
 
 =head1 VERSION
 
-version 0.0009
+version 0.0010
 
 =head1 DESCRIPTION
 

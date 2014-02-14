@@ -4,7 +4,7 @@
       "Yanick Champoux <yanick@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 5.012, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -57,6 +57,7 @@
             "Dist::Zilla::Plugin::UploadToCPAN" : "0",
             "Dist::Zilla::Role::PluginBundle::Easy" : "0",
             "Moose" : "0",
+            "PerlX::Maybe" : "0",
             "perl" : "v5.10.0",
             "strict" : "0"
          }
@@ -77,11 +78,11 @@
    "provides" : {
       "Dist::Zilla::PluginBundle::Dancer" : {
          "file" : "lib/Dist/Zilla/PluginBundle/Dancer.pm",
-         "version" : "0.0009"
+         "version" : "0.0010"
       }
    },
    "release_status" : "stable",
-   "version" : "0.0009",
+   "version" : "0.0010",
    "x_authority" : "cpan:YANICK"
 }
 
