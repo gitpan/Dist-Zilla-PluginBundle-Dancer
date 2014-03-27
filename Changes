@@ -1,5 +1,10 @@
 Revision history for Dist-Zilla-PluginBundle-Dancer
 
+0.0011 2014-03-26
+
+ [BUG FIXES]
+ - Arguments of Test::Compile were wrong. (GH#9, reported by Racke)
+
 0.0010 2014-02-13
  [IMPROVEMENTS]
  - Don't 'use' the plugins in the bundle directly. 

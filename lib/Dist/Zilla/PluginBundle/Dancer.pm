@@ -2,7 +2,7 @@ package Dist::Zilla::PluginBundle::Dancer;
 BEGIN {
   $Dist::Zilla::PluginBundle::Dancer::AUTHORITY = 'cpan:YANICK';
 }
-$Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0010';
+$Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0011';
 # ABSTRACT: dzil plugins used by Dancer projects
 
 
@@ -46,7 +46,7 @@ sub configure {
             },
         ],
         [ 'Test::Compile' => { 
-                skip => $self->test_compile_skip,
+                $self->test_compile_skip,
                 ':version' => '2.039',
             } ],
         qw/ 
@@ -94,13 +94,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Dist::Zilla::PluginBundle::Dancer - dzil plugins used by Dancer projects
 
 =head1 VERSION
 
-version 0.0010
+version 0.0011
 
 =head1 DESCRIPTION
 

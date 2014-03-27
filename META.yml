@@ -3,56 +3,58 @@ abstract: 'dzil plugins used by Dancer projects'
 author:
   - 'Yanick Champoux <yanick@cpan.org>'
 build_requires:
-  ExtUtils::MakeMaker: 0
-  File::Spec: 0
-  File::Spec::Functions: 0
-  IO::Handle: 0
-  IPC::Open3: 0
-  List::Util: 0
-  Module::Build: 0.3601
-  Test::More: 0
-  warnings: 0
+  ExtUtils::MakeMaker: '0'
+  File::Spec: '0'
+  File::Spec::Functions: '0'
+  IO::Handle: '0'
+  IPC::Open3: '0'
+  List::Util: '0'
+  Module::Build: '0.3601'
+  Test::More: '0'
+  version: '0'
+  warnings: '0'
 configure_requires:
-  ExtUtils::MakeMaker: 6.30
-  Module::Build: 0.3601
+  ExtUtils::MakeMaker: '6.30'
+  Module::Build: '0.3601'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.012, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 5.014, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: Dist-Zilla-PluginBundle-Dancer
 provides:
   Dist::Zilla::PluginBundle::Dancer:
     file: lib/Dist/Zilla/PluginBundle/Dancer.pm
-    version: 0.0010
+    version: '0.0011'
 requires:
-  Dist::Zilla::Plugin::Authority: 0
-  Dist::Zilla::Plugin::AutoPrereqs: 0
-  Dist::Zilla::Plugin::ExecDir: 0
-  Dist::Zilla::Plugin::ExtraTests: 0
-  Dist::Zilla::Plugin::GatherDir: 0
-  Dist::Zilla::Plugin::License: 0
-  Dist::Zilla::Plugin::MakeMaker: 0
-  Dist::Zilla::Plugin::Manifest: 0
-  Dist::Zilla::Plugin::ManifestSkip: 0
-  Dist::Zilla::Plugin::MetaJSON: 0
-  Dist::Zilla::Plugin::MetaProvides::Package: 0
-  Dist::Zilla::Plugin::MetaTests: 0
-  Dist::Zilla::Plugin::MetaYAML: 0
-  Dist::Zilla::Plugin::ModuleBuild: 0
-  Dist::Zilla::Plugin::NoTabsTests: 0
-  Dist::Zilla::Plugin::PkgVersion: 0
-  Dist::Zilla::Plugin::PodSyntaxTests: 0
-  Dist::Zilla::Plugin::PodWeaver: 0
-  Dist::Zilla::Plugin::PruneCruft: 0
-  Dist::Zilla::Plugin::Test::Compile: 2.039
-  Dist::Zilla::Plugin::Test::ReportPrereqs: 0
-  Dist::Zilla::Plugin::UploadToCPAN: 0
-  Dist::Zilla::Role::PluginBundle::Easy: 0
-  Moose: 0
-  PerlX::Maybe: 0
+  Dist::Zilla: '5.014'
+  Dist::Zilla::Plugin::Authority: '0'
+  Dist::Zilla::Plugin::AutoPrereqs: '0'
+  Dist::Zilla::Plugin::ExecDir: '0'
+  Dist::Zilla::Plugin::ExtraTests: '0'
+  Dist::Zilla::Plugin::GatherDir: '0'
+  Dist::Zilla::Plugin::License: '0'
+  Dist::Zilla::Plugin::MakeMaker: '0'
+  Dist::Zilla::Plugin::Manifest: '0'
+  Dist::Zilla::Plugin::ManifestSkip: '0'
+  Dist::Zilla::Plugin::MetaJSON: '0'
+  Dist::Zilla::Plugin::MetaProvides::Package: '0'
+  Dist::Zilla::Plugin::MetaTests: '0'
+  Dist::Zilla::Plugin::MetaYAML: '0'
+  Dist::Zilla::Plugin::ModuleBuild: '0'
+  Dist::Zilla::Plugin::NoTabsTests: '0'
+  Dist::Zilla::Plugin::PkgVersion: '0'
+  Dist::Zilla::Plugin::PodSyntaxTests: '0'
+  Dist::Zilla::Plugin::PodWeaver: '0'
+  Dist::Zilla::Plugin::PruneCruft: '0'
+  Dist::Zilla::Plugin::Test::Compile: '2.039'
+  Dist::Zilla::Plugin::Test::ReportPrereqs: '0'
+  Dist::Zilla::Plugin::UploadToCPAN: '0'
+  Dist::Zilla::Role::PluginBundle::Easy: '0'
+  Moose: '0'
+  PerlX::Maybe: '0'
   perl: v5.10.0
-  strict: 0
-version: 0.0010
+  strict: '0'
+version: '0.0011'
 x_authority: cpan:YANICK
