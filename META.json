@@ -4,7 +4,7 @@
       "Yanick Champoux <yanick@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.014, CPAN::Meta::Converter version 2.140640",
+   "generated_by" : "Dist::Zilla version 5.016, CPAN::Meta::Converter version 2.140640",
    "license" : [
       "perl_5"
    ],
@@ -41,6 +41,7 @@
             "Dist::Zilla::Plugin::ExecDir" : "0",
             "Dist::Zilla::Plugin::ExtraTests" : "0",
             "Dist::Zilla::Plugin::GatherDir" : "0",
+            "Dist::Zilla::Plugin::GithubMeta" : "0",
             "Dist::Zilla::Plugin::License" : "0",
             "Dist::Zilla::Plugin::MakeMaker" : "0",
             "Dist::Zilla::Plugin::Manifest" : "0",
@@ -50,12 +51,12 @@
             "Dist::Zilla::Plugin::MetaTests" : "0",
             "Dist::Zilla::Plugin::MetaYAML" : "0",
             "Dist::Zilla::Plugin::ModuleBuild" : "0",
-            "Dist::Zilla::Plugin::NoTabsTests" : "0",
             "Dist::Zilla::Plugin::PkgVersion" : "0",
             "Dist::Zilla::Plugin::PodSyntaxTests" : "0",
             "Dist::Zilla::Plugin::PodWeaver" : "0",
             "Dist::Zilla::Plugin::PruneCruft" : "0",
             "Dist::Zilla::Plugin::Test::Compile" : "2.039",
+            "Dist::Zilla::Plugin::Test::NoTabs" : "0",
             "Dist::Zilla::Plugin::Test::ReportPrereqs" : "0",
             "Dist::Zilla::Plugin::UploadToCPAN" : "0",
             "Dist::Zilla::Role::PluginBundle::Easy" : "0",
@@ -86,11 +87,22 @@
    "provides" : {
       "Dist::Zilla::PluginBundle::Dancer" : {
          "file" : "lib/Dist/Zilla/PluginBundle/Dancer.pm",
-         "version" : "0.0011"
+         "version" : "0.0012"
       }
    },
    "release_status" : "stable",
-   "version" : "0.0011",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/PerlDancer/Dist-Zilla-PluginBundle-Dancer/issues"
+      },
+      "homepage" : "https://github.com/PerlDancer/Dist-Zilla-PluginBundle-Dancer",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/PerlDancer/Dist-Zilla-PluginBundle-Dancer.git",
+         "web" : "https://github.com/PerlDancer/Dist-Zilla-PluginBundle-Dancer"
+      }
+   },
+   "version" : "0.0012",
    "x_authority" : "cpan:YANICK"
 }
 

@@ -17,7 +17,7 @@ configure_requires:
   ExtUtils::MakeMaker: '6.30'
   Module::Build: '0.3601'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.014, CPAN::Meta::Converter version 2.140640'
+generated_by: 'Dist::Zilla version 5.016, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -26,7 +26,7 @@ name: Dist-Zilla-PluginBundle-Dancer
 provides:
   Dist::Zilla::PluginBundle::Dancer:
     file: lib/Dist/Zilla/PluginBundle/Dancer.pm
-    version: '0.0011'
+    version: '0.0012'
 requires:
   Dist::Zilla: '5.014'
   Dist::Zilla::Plugin::Authority: '0'
@@ -34,6 +34,7 @@ requires:
   Dist::Zilla::Plugin::ExecDir: '0'
   Dist::Zilla::Plugin::ExtraTests: '0'
   Dist::Zilla::Plugin::GatherDir: '0'
+  Dist::Zilla::Plugin::GithubMeta: '0'
   Dist::Zilla::Plugin::License: '0'
   Dist::Zilla::Plugin::MakeMaker: '0'
   Dist::Zilla::Plugin::Manifest: '0'
@@ -43,12 +44,12 @@ requires:
   Dist::Zilla::Plugin::MetaTests: '0'
   Dist::Zilla::Plugin::MetaYAML: '0'
   Dist::Zilla::Plugin::ModuleBuild: '0'
-  Dist::Zilla::Plugin::NoTabsTests: '0'
   Dist::Zilla::Plugin::PkgVersion: '0'
   Dist::Zilla::Plugin::PodSyntaxTests: '0'
   Dist::Zilla::Plugin::PodWeaver: '0'
   Dist::Zilla::Plugin::PruneCruft: '0'
   Dist::Zilla::Plugin::Test::Compile: '2.039'
+  Dist::Zilla::Plugin::Test::NoTabs: '0'
   Dist::Zilla::Plugin::Test::ReportPrereqs: '0'
   Dist::Zilla::Plugin::UploadToCPAN: '0'
   Dist::Zilla::Role::PluginBundle::Easy: '0'
@@ -56,5 +57,9 @@ requires:
   PerlX::Maybe: '0'
   perl: v5.10.0
   strict: '0'
-version: '0.0011'
+resources:
+  bugtracker: https://github.com/PerlDancer/Dist-Zilla-PluginBundle-Dancer/issues
+  homepage: https://github.com/PerlDancer/Dist-Zilla-PluginBundle-Dancer
+  repository: https://github.com/PerlDancer/Dist-Zilla-PluginBundle-Dancer.git
+version: '0.0012'
 x_authority: cpan:YANICK

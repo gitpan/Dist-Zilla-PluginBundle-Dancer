@@ -1,5 +1,11 @@
 Revision history for Dist-Zilla-PluginBundle-Dancer
 
+0.0012 2014-05-29
+
+ [DISTRIBUTION]
+ - Change Dist::Zilla::Plugin::NoTabsTest for DZP::Test::NoTabs (GH#12)
+ - Add Github META info (url + bug tracker). (GH#11)
+
 0.0011 2014-03-26
 
  [BUG FIXES]

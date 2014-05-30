@@ -2,7 +2,7 @@ package Dist::Zilla::PluginBundle::Dancer;
 BEGIN {
   $Dist::Zilla::PluginBundle::Dancer::AUTHORITY = 'cpan:YANICK';
 }
-$Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0011';
+$Dist::Zilla::PluginBundle::Dancer::VERSION = '0.0012';
 # ABSTRACT: dzil plugins used by Dancer projects
 
 
@@ -21,6 +21,13 @@ has authority => (
     isa     => 'Maybe[Str]',
     lazy    => 1,
     default => sub { $_[0]->payload->{authority} },
+);
+
+has git_remote => (
+    isa => 'Str',
+    is => 'ro',
+    lazy => 1,
+    default => sub { $_[0]->payload->{git_remote} || 'origin' },
 );
 
 sub test_compile_skip {
@@ -51,7 +58,7 @@ sub configure {
             } ],
         qw/ 
             MetaTests
-            NoTabsTests
+            Test::NoTabs
             PodSyntaxTests
             ExtraTests
             Test::ReportPrereqs
@@ -80,6 +87,9 @@ sub configure {
             ModuleBuild
             MetaYAML
             MetaJSON
+            /,
+        [ 'GithubMeta' => { issues => 1, remote => $self->git_remote } ], 
+        qw/
             Manifest
             UploadToCPAN
         /,
@@ -102,7 +112,7 @@ Dist::Zilla::PluginBundle::Dancer - dzil plugins used by Dancer projects
 
 =head1 VERSION
 
-version 0.0011
+version 0.0012
 
 =head1 DESCRIPTION
 
@@ -121,6 +131,11 @@ their distributions. It's roughly equivalent to
     [ModuleBuild]
     [MetaYAML]
     [MetaJSON]
+
+    [GithubMeta]
+    issues = 1
+    remote = <git_remote>
+
     [Manifest]
 
     [PkgVersion]
@@ -129,7 +144,7 @@ their distributions. It's roughly equivalent to
 
     [Test::Compile]
     [MetaTests]
-    [NoTabTests]
+    [Test::NoTabs]
     [PodSyntaxTests]
     [Test::ReportPrereqs]
 
@@ -155,6 +170,11 @@ I<skip> option for L<Dist::Zilla::Plugin::AutoPrereqs>.
 =head3 include_dotfiles
 
 For L<Dist::Zilla::Plugin::GatherDir>. Defaults to I<1>.
+
+=head3 git_remote
+
+For the C<remote> argument of L<Dist::Zilla::Plugin::GithubMeta>. Defaults to
+'origin'.
 
 =head1 AUTHOR
 
